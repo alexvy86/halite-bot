@@ -69,3 +69,6 @@ ENV/
 
 # Run files for Halite
 *.hlt
+
+# Application log files
+logs/*

@@ -1,8 +1,7 @@
+import logging, logging.config
 from hlt import *
 from networking import *
-
-myID, gameMap = getInit()
-sendInit("MyPythonBot")
+import util
 
 def move(location):
     site = gameMap.getSite(location)
@@ -13,6 +12,22 @@ def move(location):
     if site.strength < site.production * 5:
         return Move(location, STILL)
     return Move(location, NORTH if random.random() > 0.5 else WEST)
+
+myID, gameMap = getInit()
+sendInit("MyPythonBot")
+
+# Initialize logging
+logs_directory = "logs" 
+logging.config.fileConfig("logging_config.ini")
+
+# Get maps
+prodMap = []
+strengthMap = []
+for y in range(gameMap.height):
+    prodMap.append([gameMap.getSite(Location(x, y)).production for x in range(gameMap.width)])
+    strengthMap.append([gameMap.getSite(Location(x, y)).strength for x in range(gameMap.width)])
+logging.info("PRODUCTION MAP\r\n" + util.formatMatrix(prodMap))
+logging.info("STRENGTH MAP\r\n" + util.formatMatrix(strengthMap))
 
 while True:
     moves = []
