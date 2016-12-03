@@ -2,8 +2,22 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "${workspaceRoot}/runGame.bat",
+    "command": "cmd",
     "isShellCommand": true,
-    "args": [],
-    "showOutput": "always"
+    "args": ["/C"],
+    "showOutput": "always",
+    "tasks":[
+        {
+            "taskName": "RunGame",
+            "args": ["${workspaceRoot}/runGame.bat"],
+            "suppressTaskName": true,
+            "isTestCommand": true
+        },
+        {
+            "taskName": "GenerateSubmissionZip",
+            "args": ["\"C:\\Program Files\\7-Zip\\7z.exe\" a -tzip submissionFile.zip @filesToZip.txt"],
+            "suppressTaskName": true,
+            "isBuildCommand": true
+        }
+    ]
 }
