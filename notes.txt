@@ -1,0 +1,9 @@
+Need to test with less random movement within our territory. So much movement doesn't allow for strength build-up.
+
+At some point need to test with "difussion parameters" that dictate the behavior of all pieces.
+These could be calculated from total strength/production/territory for each player.
+
+Alternatively, give each piece a role and have it stick to it during its lifetime. What to do when pieces merge, though?
+
+Strategy to try: detect the highest-production-lowest-strength block in the perimeter and send all resources there. Maybe split by
+cardinal direction.
