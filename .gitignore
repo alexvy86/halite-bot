@@ -72,3 +72,6 @@ ENV/
 
 # Application log files
 *.log
+
+# Submission file for Halite
+submissionFile.zip
