@@ -27,7 +27,11 @@ def move(location, game_map, bot_id):
 
     # Move randomly here, within our territory, north or west
     owned_directions = [d for d in CARDINALS if game_map.getSite(location, d).owner == bot_id]
-    return Move(location, random.choice(owned_directions))
+    if len(owned_directions) > 0:
+        return Move(location, random.choice(owned_directions))
+
+    # Default, stay still
+    return Move(location, STILL)
 
 def main(bot_id, game_map):
     """Main logic of the bot"""
