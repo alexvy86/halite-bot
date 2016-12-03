@@ -71,4 +71,4 @@ ENV/
 *.hlt
 
 # Application log files
-logs/*
+*.log
