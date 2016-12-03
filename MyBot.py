@@ -5,13 +5,24 @@ import util
 
 def move(location):
     site = gameMap.getSite(location)
+
+    # This strategy prioritizes expansion
+    
+    # Conquer neighbors that can be conquered
     for d in CARDINALS:
         neighbour_site = gameMap.getSite(location, d)
         if neighbour_site.owner != myID and neighbour_site.strength < site.strength:
             return Move(location, d)
+    
+    # Do not stay still if the site's production will cause strength to go past the cap (255)
+    if site.strength + site.production > 255:
+        return Move(location, NORTH if random.random() > 0.5 else WEST) 
+
+    # Stay still until strength is 5 times the site's production
     if site.strength < site.production * 5:
-        return Move(location, STILL)
-    return Move(location, NORTH if random.random() > 0.5 else WEST)
+        return Move(location, STILL)    
+
+    return Move(location, STILL)
 
 myID, gameMap = getInit()
 sendInit("MyPythonBot")
