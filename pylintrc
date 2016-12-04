@@ -65,7 +65,8 @@ confidence=
 # --enable=similarities". If you want to run only the classes checker, but have
 # no Warning level messages displayed, use"--disable=all --enable=classes
 # --disable=W"
-disable=getslice-method,print-statement,apply-builtin,import-star-module-level,raising-string,xrange-builtin,buffer-builtin,nonzero-method,coerce-builtin,range-builtin-not-iterating,parameter-unpacking,useless-suppression,zip-builtin-not-iterating,unicode-builtin,metaclass-assignment,map-builtin-not-iterating,long-suffix,using-cmp-argument,old-octal-literal,hex-method,dict-iter-method,setslice-method,file-builtin,filter-builtin-not-iterating,delslice-method,input-builtin,indexing-exception,cmp-builtin,unpacking-in-except,reduce-builtin,intern-builtin,dict-view-method,basestring-builtin,raw_input-builtin,unichr-builtin,coerce-method,execfile-builtin,standarderror-builtin,round-builtin,next-method-called,no-absolute-import,old-ne-operator,old-division,oct-method,suppressed-message,reload-builtin,cmp-method,long-builtin,backtick,old-raise-syntax,C0410,I0011
+disable=getslice-method,print-statement,apply-builtin,import-star-module-level,raising-string,xrange-builtin,buffer-builtin,nonzero-method,coerce-builtin,range-builtin-not-iterating,parameter-unpacking,useless-suppression,zip-builtin-not-iterating,unicode-builtin,metaclass-assignment,map-builtin-not-iterating,long-suffix,using-cmp-argument,old-octal-literal,hex-method,dict-iter-method,setslice-method,file-builtin,filter-builtin-not-iterating,delslice-method,input-builtin,indexing-exception,cmp-builtin,unpacking-in-except,reduce-builtin,intern-builtin,dict-view-method,basestring-builtin,raw_input-builtin,unichr-builtin,coerce-method,execfile-builtin,standarderror-builtin,round-builtin,next-method-called,no-absolute-import,old-ne-operator,old-division,oct-method,suppressed-message,reload-builtin,cmp-method,long-builtin,backtick,old-raise-syntax,C0410,I0011,
+C0301
 
 
 [REPORTS]
