@@ -5,7 +5,7 @@ from hlt import * # pylint: disable=W0401,W0614
 from networking import * # pylint: disable=W0401,W0614
 import util
 
-def move(location, game_map):
+def move(location, game_map, bot_id):
     """Defines the move logic for the bot"""
     site = game_map.getSite(location)
 
@@ -25,6 +25,12 @@ def move(location, game_map):
     if site.strength < site.production * 5:
         return Move(location, STILL)
 
+    # Move randomly here, within our territory, north or west
+    owned_directions = [d for d in CARDINALS if game_map.getSite(location, d).owner == bot_id]
+    if len(owned_directions) > 0:
+        return Move(location, random.choice(owned_directions))
+
+    # Default, stay still
     return Move(location, STILL)
 
 def main(bot_id, game_map):
@@ -51,10 +57,10 @@ def main(bot_id, game_map):
             for x in range(game_map.width): # pylint: disable=C0103
                 loc = Location(x, y)
                 if game_map.getSite(loc).owner == bot_id:
-                    moves.append(move(loc, game_map))
+                    moves.append(move(loc, game_map, bot_id))
         sendFrame(moves)
 
 MY_ID, GAME_MAP = getInit()
-sendInit("OldBot")
+sendInit("Oldbot")
 
 main(MY_ID, GAME_MAP)
