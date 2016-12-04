@@ -8,8 +8,26 @@
     "showOutput": "always",
     "tasks":[
         {
-            "taskName": "RunGame",
-            "args": ["${workspaceRoot}/runGame.bat"],
+            "taskName": "RunGame15",
+            "args": ["${workspaceRoot}/halite.exe -d \"15 15\" \"python MyBot.py\" \"python OldBot.py\""],
+            "suppressTaskName": true,
+            "isTestCommand": true
+        },
+        {
+            "taskName": "RunGame30",
+            "args": ["${workspaceRoot}/halite.exe -d \"30 30\" \"python MyBot.py\" \"python OldBot.py\""],
+            "suppressTaskName": true,
+            "isTestCommand": true
+        },
+        {
+            "taskName": "RunGame50",
+            "args": ["${workspaceRoot}/halite.exe -d \"50 50\" \"python MyBot.py\" \"python OldBot.py\""],
+            "suppressTaskName": true,
+            "isTestCommand": true
+        },
+        {
+            "taskName": "RunGamesBattery",
+            "args": ["${workspaceRoot}/runGamesBattery.bat"],
             "suppressTaskName": true,
             "isTestCommand": true
         },
