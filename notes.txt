@@ -7,3 +7,8 @@ Alternatively, give each piece a role and have it stick to it during its lifetim
 
 Strategy to try: detect the highest-production-lowest-strength block in the perimeter and send all resources there. Maybe split by
 cardinal direction.
+
+Once you have the whole screen width or height, all movement should be directed to the other orientation.
+
+Try: calculate "choke points" (best no-man-land to conquer in the perimeter, battle sites with enemies in the perimeter) and start
+from there to calculate the moves.
