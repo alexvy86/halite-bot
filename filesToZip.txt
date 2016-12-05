@@ -1,5 +1,4 @@
 hlt.py
 logging_config.ini
 MyBot.py
-networking.py
 util.py
