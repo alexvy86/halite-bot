@@ -12,3 +12,6 @@ Once you have the whole screen width or height, all movement should be directed 
 
 Try: calculate "choke points" (best no-man-land to conquer in the perimeter, battle sites with enemies in the perimeter) and start
 from there to calculate the moves.
+
+Once there is a whole vertical wall, sometimes squares get stupid and start moving perpendicularly to that wall because of the interactions
+between the perimeter squares and the nearby ones.
