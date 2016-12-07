@@ -15,3 +15,7 @@ from there to calculate the moves.
 
 Once there is a whole vertical wall, sometimes squares get stupid and start moving perpendicularly to that wall because of the interactions
 between the perimeter squares and the nearby ones.
+
+Try an approach where we calculate a heuristic for each square in the map, and then we just iterate over each of our squares telling it
+to move to the square with the best heuristic it can find among its neighbors. Probably needs calculating the heuristic based on current
+square in addition to neighbors.
